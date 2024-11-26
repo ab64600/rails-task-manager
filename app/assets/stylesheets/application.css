@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+/* Icône pour statut "Completed" */
+.completed::after {
+  content: "\f058"; /* Code Font Awesome pour un check-circle */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #198754; /* Vert Bootstrap */
+  margin-left: 0.5rem;
+}
+
+/* Icône pour statut "Not Completed" */
+.not-completed::after {
+  content: "\f252"; /* Code Font Awesome pour un sablier */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ffc107; /* Jaune Bootstrap */
+  margin-left: 0.5rem;
+}
+
+/* Icône pour le bouton Edit */
+.edit-icon::before {
+  content: "\f044"; /* Code Font Awesome pour un crayon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+
+/* Icône pour le bouton Delete */
+.delete-icon::before {
+  content: "\f1f8"; /* Code Font Awesome pour une corbeille */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}

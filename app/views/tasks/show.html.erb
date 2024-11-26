@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <h1><%= @task.title %></h1>
+
+  <p><strong>Details:</strong> <%= @task.details %></p>
+  <p><strong>Status:</strong>
+    <%= @task.completed ?
+      "<i class='fas fa-check-circle'></i> Completed".html_safe :
+      "<i class='fas fa-hourglass-half'></i> Not completed".html_safe %>
+  </p>
+
+  <div class="mb-3">
+    <%= link_to 'Edit', edit_task_path(@task), class: "btn btn-primary" %>
+
+    <%= link_to task_path(@task), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" do %>
+      <i class="fas fa-trash"></i> Delete
+    <% end %>
+
+    <%= link_to 'Back to All Tasks', tasks_path, class: "btn btn-secondary" %>
+  </div>
+</div>
